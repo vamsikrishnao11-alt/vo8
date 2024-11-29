@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <center>
+            {% for i in v %} 
+            <input type="radio" name="c" id="c" value="o"> {{i.sub}} {{'Rs.'}} {{i.fee}} {{ '   ' }}
+            {% endfor %}
+            <br>
+            <table>
+                <tr>
+                    <th>
+                        <label for="sname">sname</label>
+                    </th>
+                    <th><input type="text" name="sname" id="sname"></th>
+                </tr>
+               <tr>
+                <th>
+                    <label for="num">num</label>
+                </th>
+                <th>
+                    <input type="num" name="num" id="num">
+                </th>
+               </tr>
+            <tr>
+                <th>
+                    <label for="paid">paid</label>
+                    
+                </th>
+                <th><input type="text" name="paid" id="paid"><br></th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="username">username</label>
+                    
+                </th>
+                <th>
+                    <input type="text" name="username" id="username"><br>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="password">password</label>
+
+                    
+                </th>
+                <th>
+                    <input type="text" name="password" id="password"><br>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="sub">sub</label>
+                </th>
+                <th>
+                    <input type="sub" name="sub" id="sub">
+                </th>
+            </tr>
+          </table>
+        </center>
+        <center>
+            <input type="submit" name="ENTER">
+
+        </center>
+        
+    </form>
+
+</body>
+</html>

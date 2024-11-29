@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <center>
+            {% for i in v %} 
+            <input type="radio" name="c" id="c" value="o"> {{i.sname}}  {{ '   ' }}
+            {% endfor %}
+            <br>
+            <table>
+                <tr>
+                    <th>
+                        <label for="sname">sname</label>
+                    </th>
+                    <th><input type="text" name="sname" id="sname"></th>
+                </tr>
+               <tr>
+                <th>
+                    <label for="code">code</label>
+                </th>
+                <th>
+                    <input type="text" name="code" id="code">
+                </th>
+               </tr>
+            <tr>
+                <th>
+                    <label for="verify">verify</label>
+                    
+                </th>
+                <th><input type="text" name="verify" id="verify"><br></th>
+            </tr>
+            
+          </table>
+        </center>
+        <center>
+            <input type="submit" name="ENTER">
+
+        </center>
+        
+    </form>
+
+</body>
+</html>
